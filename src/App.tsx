@@ -1,9 +1,13 @@
 import * as Styles from "./AppStyles";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./Routes";
 
 function App() {
   return (
     <Styles.Container>
-      This is react app 
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </Styles.Container>
   );
 }
