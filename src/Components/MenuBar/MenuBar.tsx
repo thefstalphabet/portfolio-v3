@@ -1,9 +1,12 @@
 import * as Styles from "./MenuBarStyles";
 import {
   CaretRightOutlined,
+  CloseOutlined,
   CloseSquareOutlined,
   HomeOutlined,
+  MessageOutlined,
   RocketOutlined,
+  SolutionOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import { Menu, MenuProps } from "antd";
@@ -30,10 +33,12 @@ const items: MenuItem[] = [
   getItem("Home", "1", <HomeOutlined />),
   getItem("About", "2", <UserOutlined />),
   getItem("Projects", "3", <RocketOutlined />),
+  getItem("Experiences", "4", <SolutionOutlined />),
+  getItem("Contact Me", "5", <MessageOutlined />),
 ];
 
 function MenuBar() {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState<boolean>(false);
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
@@ -50,7 +55,7 @@ function MenuBar() {
         <CaretRightOutlined />
       </span>
       <Styles.Footer>
-        <CloseSquareOutlined
+        <CloseOutlined
           className="crossIcon"
           onClick={() => toggleCollapsed()}
         />
