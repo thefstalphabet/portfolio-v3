@@ -8,12 +8,12 @@ export const Container = styled.div`
     transition-duration: 0.5s;
     .toggleIcon{
         position: absolute;
-        top: 50px;
+        top: 90px;
         right: -36px;
         font-size: 50px;
         color: var(--black);
         cursor: pointer;
-        opacity: 0.5;
+        opacity: 0.3;
     }
 `;
 export const Footer = styled.div`
@@ -25,6 +25,5 @@ export const Footer = styled.div`
         color: var(--black);
         z-index: 1000;
         cursor: pointer;
-        opacity: 0.5;
     }
 `;

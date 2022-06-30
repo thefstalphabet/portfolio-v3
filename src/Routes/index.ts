@@ -1,3 +1,5 @@
-import Home from '../Routes/Home/Home'
+import Home from './Home/Home'
+import About from './About/About'
+import Layout from './Layout/Layout'
 
-export { Home }
+export { Home, About, Layout }

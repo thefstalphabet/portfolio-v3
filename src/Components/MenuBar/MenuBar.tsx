@@ -2,7 +2,7 @@ import * as Styles from "./MenuBarStyles";
 import {
   CaretRightOutlined,
   CloseOutlined,
-  CloseSquareOutlined,
+  FileDoneOutlined,
   HomeOutlined,
   MessageOutlined,
   RocketOutlined,
@@ -11,6 +11,7 @@ import {
 } from "@ant-design/icons";
 import { Menu, MenuProps } from "antd";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 type MenuItem = Required<MenuProps>["items"][number];
 function getItem(
@@ -29,19 +30,56 @@ function getItem(
   } as MenuItem;
 }
 
-const items: MenuItem[] = [
-  getItem("Home", "1", <HomeOutlined />),
-  getItem("About", "2", <UserOutlined />),
-  getItem("Projects", "3", <RocketOutlined />),
-  getItem("Experiences", "4", <SolutionOutlined />),
-  getItem("Contact Me", "5", <MessageOutlined />),
-];
-
 function MenuBar() {
   const [collapsed, setCollapsed] = useState<boolean>(false);
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
+
+  const items: MenuItem[] = [
+    getItem(
+      <Link to="/" onClick={() => toggleCollapsed()}>
+        Home
+      </Link>,
+      "1",
+      <HomeOutlined />
+    ),
+    getItem(
+      <Link to="/about" onClick={() => toggleCollapsed()}>
+        About
+      </Link>,
+      "2",
+      <UserOutlined />
+    ),
+    getItem(
+      <Link to="/experties" onClick={() => toggleCollapsed()}>
+        Experties
+      </Link>,
+      "3",
+      <FileDoneOutlined />
+    ),
+    getItem(
+      <Link to="/projects" onClick={() => toggleCollapsed()}>
+        Projects
+      </Link>,
+      "4",
+      <RocketOutlined />
+    ),
+    getItem(
+      <Link to="/experiences" onClick={() => toggleCollapsed()}>
+        Experiences
+      </Link>,
+      "5",
+      <SolutionOutlined />
+    ),
+    getItem(
+      <Link to="/contact" onClick={() => toggleCollapsed()}>
+        Contact Me
+      </Link>,
+      "6",
+      <MessageOutlined />
+    ),
+  ];
 
   return (
     <Styles.Container style={{ left: collapsed ? "0" : "-100vw" }}>
