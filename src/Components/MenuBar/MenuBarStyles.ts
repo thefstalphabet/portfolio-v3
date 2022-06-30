@@ -5,13 +5,15 @@ export const Container = styled.div`
     z-index: 500;
     width: 100vw;
     height: 100vh;
+    transition-duration: 0.5s;
     .toggleIcon{
         position: absolute;
         top: 50px;
         right: -36px;
         font-size: 50px;
-        color: #000000;
+        color: var(--black);
         cursor: pointer;
+        opacity: 0.5;
     }
 `;
 export const Footer = styled.div`
@@ -20,8 +22,9 @@ export const Footer = styled.div`
     bottom: 0;
     .crossIcon{
         font-size: 40px;
-        color: #000000;
+        color: var(--black);
         z-index: 1000;
         cursor: pointer;
+        opacity: 0.5;
     }
 `;
