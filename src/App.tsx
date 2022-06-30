@@ -1,12 +1,29 @@
 import * as Styles from "./AppStyles";
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./Routes";
+import allRoutes from "./Configs/Routes";
 
 function App() {
   return (
     <Styles.Container>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        {allRoutes.map((route, idx) => {
+          return (
+            <Route key={idx} path={route.path} element={route.component}>
+              {route.subRoutes &&
+                route.subRoutes.map((subRoute, idx) => {
+                  return (
+                    <Route
+                      index={subRoute.index && true}
+                      key={idx}
+                      path={subRoute.path}
+                      element={subRoute.component}
+                    />
+                  );
+                })}
+            </Route>
+          );
+        })}
       </Routes>
     </Styles.Container>
   );
