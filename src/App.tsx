@@ -6,7 +6,6 @@ function App() {
   return (
     <Styles.Container>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
         {allRoutes.map((route, idx) => {
           return (
             <Route key={idx} path={route.path} element={route.component}>

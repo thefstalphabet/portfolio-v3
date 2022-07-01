@@ -10,3 +10,8 @@ body {
   --white: #ffffff
   color: var(--black)
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
