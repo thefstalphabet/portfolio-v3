@@ -1,13 +1,15 @@
-import { Outlet } from 'react-router-dom'
-import { MenuBar } from '../../Components'
+import { Outlet } from "react-router-dom";
+import { Header, MenuBar } from "../../Components";
+import * as Styles from "./LayoutStyles";
 
 function Layout() {
   return (
-    <div>
-        <MenuBar/>
-        <Outlet/>
-    </div>
-  )
+    <Styles.Container>
+      <MenuBar />
+      <Header />
+      <Outlet />
+    </Styles.Container>
+  );
 }
 
-export default Layout
+export default Layout;
