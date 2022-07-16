@@ -1,4 +1,4 @@
-import { Home, About, Layout } from "../Routes";
+import { Home, About, Layout, Experience } from "../Routes";
 
 type subRoutesType = {
   path?: string;
@@ -24,6 +24,10 @@ const allRoutes: Array<routesType> = [
       {
         path: "/about",
         component: <About />,
+      },
+      {
+        path: "/experience",
+        component: <Experience />,
       },
     ],
   },
