@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     justify-content: end;
-    padding: 0 1rem 0 1rem;
+    padding: 0.5rem 1rem 0 1rem;
 `;
 export const SocialIcons = styled.div`
     display: flex;

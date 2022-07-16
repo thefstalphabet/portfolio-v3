@@ -1,10 +1,10 @@
 import * as Styles from "./MenuBarStyles";
 import {
-  CaretRightOutlined,
   CloseOutlined,
   FileDoneOutlined,
   HomeOutlined,
   MessageOutlined,
+  RightOutlined,
   RocketOutlined,
   SolutionOutlined,
   UserOutlined,
@@ -90,7 +90,7 @@ function MenuBar() {
         items={items}
       />
       <span className="toggleIcon" onClick={() => toggleCollapsed()}>
-        <CaretRightOutlined />
+        <RightOutlined />
       </span>
       <Styles.Footer>
         <CloseOutlined

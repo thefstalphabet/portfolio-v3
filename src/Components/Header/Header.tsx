@@ -2,6 +2,7 @@ import {
   GithubOutlined,
   InstagramOutlined,
   TwitterOutlined,
+  MenuOutlined,
 } from "@ant-design/icons";
 import * as Styles from "./HeaderStyles";
 
