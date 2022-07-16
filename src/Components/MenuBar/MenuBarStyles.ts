@@ -10,21 +10,24 @@ export const Container = styled.div`
     transition-duration: 0.5s;
     background-color: #ffffff;
     .toggleIcon{
+        padding: 0.1rem;
+        background-color: var(--light-gray);
+        font-size: 25px;
         position: absolute;
         top: 90px;
-        right: -36px;
-        font-size: 50px;
-        color: var(--black);
+        right: -28px;
         cursor: pointer;
-        opacity: 0.3;
+        border-radius: 0 5px 5px 0;
+        color: var(--black);
+        opacity: 0.8;
     }
-`;
+    `;
 export const Footer = styled.div`
     position: absolute;
     right: 0;
     bottom: 0;
     .crossIcon{
-        font-size: 40px;
+        font-size: 35px;
         color: var(--black);
         z-index: 1000;
         cursor: pointer;
