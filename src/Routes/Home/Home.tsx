@@ -5,7 +5,6 @@ function Home() {
   return (
     <Styles.Container>
       <Styles.Body>
-        <img src="Assets/Akash.png" alt="Akash" className="akashImg" />
         <div className="sortInfo">
           <h1>Hey There, I'm Akash</h1>
           <h3>A Software Engineer, that Turns Coffee into Code</h3>
@@ -14,6 +13,7 @@ function Home() {
             <Button>Lets Talk</Button>
           </div>
         </div>
+        <img src="Assets/Akash.png" alt="Akash" className="akashImg" />
       </Styles.Body>
     </Styles.Container>
   );

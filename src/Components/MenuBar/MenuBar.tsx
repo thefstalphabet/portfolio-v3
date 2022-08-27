@@ -66,7 +66,7 @@ function MenuBar() {
       <RocketOutlined />
     ),
     getItem(
-      <Link to="/experiences" onClick={() => toggleCollapsed()}>
+      <Link to="/experience" onClick={() => toggleCollapsed()}>
         Experiences
       </Link>,
       "5",
