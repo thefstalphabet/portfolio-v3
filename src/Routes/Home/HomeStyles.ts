@@ -19,6 +19,7 @@ export const Body = styled.div`
             display: flex;
             gap: 1rem;
         }
+        padding: 0 5rem;
     }
     @media only screen and (max-width: 600px) {
         grid-template-columns: 1fr; 
