@@ -11,7 +11,7 @@ export const Container = styled.div`
     background-color: #ffffff;
     .toggleIcon{
         padding: 0.1rem;
-        background-color: var(--light-gray);
+        background-color: var(--sec-light-color);
         font-size: 25px;
         position: absolute;
         top: 90px;

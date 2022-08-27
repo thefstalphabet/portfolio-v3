@@ -1,20 +1,29 @@
-import { Button } from "antd";
+import { Background } from "../../Animations";
 import * as Styles from "./HomeStyles";
+import socialIconsData from "../../Configs/SocialIconsData";
+import { Button } from "antd";
 
 function Home() {
   return (
     <Styles.Container>
-      <Styles.Body>
-        <div className="sortInfo">
-          <h1>Hey There, I'm Akash</h1>
-          <h3>A Software Engineer, that Turns Coffee into Code</h3>
-          <div className="sortInfoBtns">
-            <Button type="primary">Know About</Button>
-            <Button>Lets Talk</Button>
-          </div>
-        </div>
-        <img src="Assets/Akash.png" alt="Akash" className="akashImg" />
-      </Styles.Body>
+      <Background />
+      <Styles.SocialIcons>
+        {socialIconsData.map((item, idx) => (
+          <a
+            key={idx}
+            href={item.url}
+            className="icon"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {item.icon}
+          </a>
+        ))}
+      </Styles.SocialIcons>
+      <Styles.SortInfo>
+        <h1>Hello, I'm <span>Akash Patel</span>.<br/>I'm a full-stack web developer.</h1>
+        <Button type="primary">Know More</Button>
+      </Styles.SortInfo>
     </Styles.Container>
   );
 }

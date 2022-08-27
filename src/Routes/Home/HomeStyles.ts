@@ -1,35 +1,38 @@
 import styled from 'styled-components'
 
 export const Container = styled.div``;
-export const Body = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    gap: 0.5rem;
-    .akashImg{
-        width: 22rem;
+export const SocialIcons = styled.div`
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    justify-content: end;
+    padding: 10px 1rem;
+    position: relative;
+    .icon{
+        cursor: pointer;
+        color: var(--white);
+        font-size: 25px;
     }
-    .sortInfo{
-        h1{
-            font-size: 4rem;
+`;
+export const SortInfo = styled.div`
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* height: 70vh; */
+    padding: 0 1rem;
+    text-align: center;
+    h1{
+        font-size: 2.7rem;
+        color: var(--white);
+        font-weight: bold;
+        line-height: 1.2;
+        span{
+            color:  var(--pri-color);
         }
-        .sortInfoBtns{
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-        }
-        padding: 0 5rem;
     }
     @media only screen and (max-width: 600px) {
-        grid-template-columns: 1fr; 
-        .akashImg{
-            width: 19rem;
-        } 
-        .sortInfo{
         h1{
-            font-size: 24px;
-        }
-    } 
+            font-size: 1.8rem;
+        }   
     }
 `;
