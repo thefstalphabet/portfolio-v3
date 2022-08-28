@@ -38,7 +38,7 @@ export const Home = styled.div`
         }
         .infoBtn{
             color: var(--white);
-            margin-top: 10px;
+            margin-top: 15px;
             border: 1.5px solid var(--white);
         }
         @media only screen and (max-width: 600px) {
@@ -48,3 +48,4 @@ export const Home = styled.div`
     }
     }
 `;
+export const About = styled.div``;

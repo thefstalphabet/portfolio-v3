@@ -8,7 +8,10 @@ export const Container = styled.div`
     width: 100vw;
     height: 100vh;
     transition-duration: 0.5s;
-    background-color: #ffffff;
+    background-color: var(--white);
+    .ant-menu-item-selected, .ant-menu-item-selected a {
+        color: var(--white) !important 
+    }
     .toggleIcon{
         padding: 0.1rem;
         font-size: 28px;

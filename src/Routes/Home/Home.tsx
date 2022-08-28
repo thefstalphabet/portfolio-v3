@@ -2,7 +2,7 @@ import { Background } from "../../Animations";
 import * as Styles from "./HomeStyles";
 import socialIconsData from "../../Configs/SocialIconsData";
 import { Button } from "antd";
-import About from "../About/About";
+import { ArrowDownOutlined } from "@ant-design/icons";
 
 function Home() {
   return (
@@ -27,14 +27,22 @@ function Home() {
               Hello, I'm <span>Akash Patel</span>.<br />
               I'm a full-stack web developer.
             </h1>
-            <Button type="ghost" href="/about" className="infoBtn">
+            <Button
+              type="ghost"
+              href="/about"
+              className="infoBtn"
+              icon={<ArrowDownOutlined />}
+              size="large"
+            >
               Know More
             </Button>
           </div>
         </Styles.Home>
       </Styles.Body>
       <Background />
-      <About />
+      <Styles.About>
+        <h1>About Section</h1>
+      </Styles.About>
     </Styles.Container>
   );
 }
