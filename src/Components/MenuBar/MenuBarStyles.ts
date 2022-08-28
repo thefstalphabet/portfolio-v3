@@ -11,14 +11,13 @@ export const Container = styled.div`
     background-color: #ffffff;
     .toggleIcon{
         padding: 0.1rem;
-        background-color: var(--light-gray);
-        font-size: 25px;
+        font-size: 28px;
         position: absolute;
         top: 90px;
-        right: -28px;
+        right: -32px;
         cursor: pointer;
         border-radius: 0 5px 5px 0;
-        color: var(--black);
+        color: var(--white);
         opacity: 0.8;
     }
     `;
