@@ -1,8 +1,10 @@
 import { Background } from "../../Animations";
 import * as Styles from "./DashboardStyles";
 import socialIconsData from "../../Configs/SocialIconsData";
-import { Button } from "antd";
+import { Button, Timeline } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
+import Avatar from "../../Assets/Avatar.png";
+import ExperienceItems from "../../Configs/ExperienceItems";
 
 function Dashboard() {
   return (
@@ -27,8 +29,8 @@ function Dashboard() {
         <Styles.Home>
           <div className="sortInfo">
             <h1>
-              Hello, I'm <span>Akash Patel</span>.<br />
-              I'm a full-stack web developer.
+              Hello, I'm <span>Akash Patel</span>.<br />I enjoy designing <br />
+              websites and digital products.
             </h1>
             <Button
               type="ghost"
@@ -45,7 +47,74 @@ function Dashboard() {
         {/* --------------------- ABOUT SECTION ------------------------ */}
         <Styles.About>
           <h1>About Section</h1>
+          <div className="body">
+            <img src={Avatar} alt="avatar" className="avatar" />
+            <div className="info">
+              <h1>
+                I'm <span>Akash Patel</span>.<br />A full-stack web developer.
+              </h1>
+              <p>
+                Completed my bachelor's in Technology from Takshila Institute of
+                Engineering & Technology, Jabalpur. My specialization is in{" "}
+                <span>Computer Science Engineering</span>. I have a deep
+                interest in web development and I have worked on various
+                projects using the <span>MERN stack</span>apart from that I am
+                currently working at <span>TIKAJ</span> as a{" "}
+                <span>Software Developer Engineer</span>, and I am always open
+                to contributing to a great project that impacts the world.
+              </p>
+            </div>
+          </div>
         </Styles.About>
+        {/* --------------------- Projects SECTION ------------------------ */}
+        <Styles.Projects>
+          <h1>Projects</h1>
+          <div className="body">All projects</div>
+        </Styles.Projects>
+        {/* --------------------- EXPERIENCE SECTION ------------------------ */}
+        <Styles.Experience>
+          <h1>Experiences Section</h1>
+          <div className="body">
+            <Timeline mode="alternate">
+              {ExperienceItems.map((item, idx) => {
+                const {
+                  role,
+                  org,
+                  employmentType,
+                  startMonth,
+                  startYear,
+                  endMonth,
+                  endYear,
+                  location,
+                  currentlyWorking,
+                } = item;
+                return (
+                  <Timeline.Item
+                    key={idx}
+                    color={currentlyWorking ? "red" : "blue"}
+                  >
+                    <h3>{role}</h3>
+                    <h4>
+                      {org} | {employmentType}
+                    </h4>
+                    <h5>
+                      {startMonth} {startYear}
+                      {" - "}
+                      {currentlyWorking ? (
+                        "Present"
+                      ) : (
+                        <>
+                          {endMonth} {endYear}
+                        </>
+                      )}
+                    </h5>
+                    <h5>{location}</h5>
+                  </Timeline.Item>
+                );
+              })}
+            </Timeline>
+          </div>
+        </Styles.Experience>
       </div>
     </Styles.Container>
   );

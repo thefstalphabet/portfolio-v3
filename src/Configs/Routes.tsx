@@ -1,4 +1,4 @@
-import { Dashboard, Layout, Experience, Page404 } from "../Routes";
+import { Dashboard, Layout, Page404 } from "../Routes";
 
 type subRoutesType = {
   path?: string;
@@ -20,10 +20,6 @@ const allRoutes: Array<routesType> = [
       {
         index: true,
         component: <Dashboard />,
-      },
-      {
-        path: "/experience",
-        component: <Experience />,
       },
       {
         path: "*",
