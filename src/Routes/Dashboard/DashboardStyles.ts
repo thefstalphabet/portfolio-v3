@@ -16,7 +16,6 @@ export const SocialIcons = styled.div`
         font-size: 25px;
     }
 `;
-export const Body = styled.div``;
 export const Home = styled.div`
     display: grid;
     justify-items: center;
