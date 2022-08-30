@@ -48,7 +48,8 @@ export const Home = styled.div`
     }
 `;
 export const About = styled.div`
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     padding: 10px 1rem;
     .body{
         display: grid;
@@ -56,7 +57,7 @@ export const About = styled.div`
         justify-content: center;
         align-items: center;
         justify-items: center;
-        margin-top: 4rem;
+        margin-top: 5rem;
         row-gap: 2rem;
         .avatar{
             width: 20rem;
@@ -85,10 +86,34 @@ export const About = styled.div`
     }
 `;
 export const Projects = styled.div`
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     padding: 10px 1rem;
     .body{
-
+        margin-top: 2rem;
+        .projects{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            justify-content: center;
+            .project{
+                .banner{
+                    object-fit: cover;
+                }
+            }
+        }
+        @media only screen and (max-width: 800px){
+            .projects{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media only screen and (max-width: 600px){
+            .projects{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
     }
 `;
 export const Experience = styled.div`
