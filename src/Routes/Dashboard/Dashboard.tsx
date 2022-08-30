@@ -1,17 +1,21 @@
 import { Background } from "../../Animations";
 import * as Styles from "./DashboardStyles";
-import socialIconsData from "../../Configs/SocialIconsData";
-import { Button, Timeline } from "antd";
+import SocialIconsData from "../../Configs/SocialIconsData";
+import { Button, Image, Timeline } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
 import Avatar from "../../Assets/Avatar.png";
 import ExperienceItems from "../../Configs/ExperienceItems";
+import { Tabs } from "antd";
+import ProjectData from "../../Configs/ProjectsData";
 
 function Dashboard() {
+  const { TabPane } = Tabs;
+
   return (
     <Styles.Container>
       <div className="header">
         <Styles.SocialIcons>
-          {socialIconsData.map((item, idx) => (
+          {SocialIconsData.map((item, idx) => (
             <a
               key={idx}
               href={item.url}
@@ -58,7 +62,7 @@ function Dashboard() {
                 Engineering & Technology, Jabalpur. My specialization is in{" "}
                 <span>Computer Science Engineering</span>. I have a deep
                 interest in web development and I have worked on various
-                projects using the <span>MERN stack</span>apart from that I am
+                projects using the <span>MERN stack</span> apart from that I am
                 currently working at <span>TIKAJ</span> as a{" "}
                 <span>Software Developer Engineer</span>, and I am always open
                 to contributing to a great project that impacts the world.
@@ -69,7 +73,86 @@ function Dashboard() {
         {/* --------------------- Projects SECTION ------------------------ */}
         <Styles.Projects>
           <h1>Projects</h1>
-          <div className="body">All projects</div>
+          <div className="body">
+            <Tabs defaultActiveKey="1" size="large" centered>
+              <TabPane tab="All" key="1">
+                <div className="projects">
+                  {ProjectData.map((item, idx) => {
+                    const { banner, title } = item;
+                    return (
+                      <div className="project">
+                        <Image
+                          src={banner}
+                          alt={`Project ${idx}`}
+                          placeholder
+                          className="banner"
+                        />
+                        <h2>{title}</h2>
+                      </div>
+                    );
+                  })}
+                </div>
+              </TabPane>
+              <TabPane
+                tab="React"
+                key="2"
+                disabled={
+                  ProjectData.filter((item) => item.technologyUsed === "react")
+                    .length === 0
+                    ? true
+                    : false
+                }
+              >
+                <div className="projects">
+                  {ProjectData.filter(
+                    (item) => item.technologyUsed === "react"
+                  ).map((item, idx) => {
+                    const { banner, title } = item;
+                    return (
+                      <div className="project">
+                        <Image
+                          src={banner}
+                          alt={`Project ${idx}`}
+                          placeholder
+                          className="banner"
+                        />
+                        <h2>{title}</h2>
+                      </div>
+                    );
+                  })}
+                </div>
+              </TabPane>
+              <TabPane
+                tab="MERN"
+                key="3"
+                disabled={
+                  ProjectData.filter((item) => item.technologyUsed === "mern")
+                    .length === 0
+                    ? true
+                    : false
+                }
+              >
+                <div className="projects">
+                  {ProjectData.filter(
+                    (item) => item.technologyUsed === "mern"
+                  ).map((item, idx) => {
+                    const { banner, title } = item;
+                    return (
+                      <div className="project">
+                        <Image
+                          src={banner}
+                          alt={`Project ${idx}`}
+                          placeholder
+                          className="banner"
+                        />
+                        <h2>{title}</h2>
+                      </div>
+                    );
+                  })}
+                </div>
+              </TabPane>
+            </Tabs>
+          </div>
         </Styles.Projects>
         {/* --------------------- EXPERIENCE SECTION ------------------------ */}
         <Styles.Experience>
