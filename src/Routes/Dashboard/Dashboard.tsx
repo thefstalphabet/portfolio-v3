@@ -176,11 +176,11 @@ function Dashboard() {
                     key={idx}
                     color={currentlyWorking ? "red" : "blue"}
                   >
-                    <h3>{role}</h3>
-                    <h4>
+                    <h2>{role}</h2>
+                    <h3>
                       {org} | {employmentType}
-                    </h4>
-                    <h5>
+                    </h3>
+                    <h3>
                       {startMonth} {startYear}
                       {" - "}
                       {currentlyWorking ? (
@@ -190,8 +190,8 @@ function Dashboard() {
                           {endMonth} {endYear}
                         </>
                       )}
-                    </h5>
-                    <h5>{location}</h5>
+                    </h3>
+                    <h3>{location}</h3>
                   </Timeline.Item>
                 );
               })}

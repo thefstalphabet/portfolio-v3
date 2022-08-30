@@ -117,10 +117,11 @@ export const Projects = styled.div`
     }
 `;
 export const Experience = styled.div`
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     padding: 10px 1rem;
     .body{
-        margin-top: 4rem;
+        margin-top: 6rem;
 
     }
 `;
