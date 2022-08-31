@@ -44,7 +44,6 @@ const ExperienceItems: Array<ExperienceItemsType> = [
         location: "Bangalore, India"
 
     },
-    
 ]
 
 export default ExperienceItems

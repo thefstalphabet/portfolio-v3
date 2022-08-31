@@ -7,7 +7,6 @@ import Avatar from "../../Assets/Avatar.png";
 import ExperienceItems from "../../Configs/ExperienceItems";
 import { Tabs } from "antd";
 import ProjectData from "../../Configs/ProjectsData";
-
 function Dashboard() {
   const { TabPane } = Tabs;
 
@@ -70,17 +69,61 @@ function Dashboard() {
             </div>
           </div>
         </Styles.About>
+        {/* --------------------- EXPERIENCE SECTION ------------------------ */}
+        <Styles.Experience>
+          <h1>Experiences Section</h1>
+          <div className="body">
+            <Timeline mode="alternate">
+              {ExperienceItems.map((item, idx) => {
+                const {
+                  role,
+                  org,
+                  employmentType,
+                  startMonth,
+                  startYear,
+                  endMonth,
+                  endYear,
+                  location,
+                  currentlyWorking,
+                } = item;
+                return (
+                  <Timeline.Item
+                    key={idx}
+                    color={currentlyWorking ? "red" : "blue"}
+                  >
+                    <h2>{role}</h2>
+                    <h3>
+                      {org} <span>|</span> {employmentType}
+                    </h3>
+                    <h3>
+                      {startMonth} {startYear}
+                      <span>-</span>
+                      {currentlyWorking ? (
+                        "Present"
+                      ) : (
+                        <>
+                          {endMonth} {endYear}
+                        </>
+                      )}
+                    </h3>
+                    <h3>{location}</h3>
+                  </Timeline.Item>
+                );
+              })}
+            </Timeline>
+          </div>
+        </Styles.Experience>
         {/* --------------------- Projects SECTION ------------------------ */}
         <Styles.Projects>
           <h1>Projects</h1>
           <div className="body">
-            <Tabs defaultActiveKey="1" size="large" centered>
+            <Tabs defaultActiveKey="1" tabBarGutter={100} size="large" centered>
               <TabPane tab="All" key="1">
                 <div className="projects">
                   {ProjectData.map((item, idx) => {
                     const { banner, title } = item;
                     return (
-                      <div className="project">
+                      <div className="project" key={idx}>
                         <Image
                           src={banner}
                           alt={`Project ${idx}`}
@@ -109,7 +152,7 @@ function Dashboard() {
                   ).map((item, idx) => {
                     const { banner, title } = item;
                     return (
-                      <div className="project">
+                      <div className="project" key={idx}>
                         <Image
                           src={banner}
                           alt={`Project ${idx}`}
@@ -138,7 +181,7 @@ function Dashboard() {
                   ).map((item, idx) => {
                     const { banner, title } = item;
                     return (
-                      <div className="project">
+                      <div className="project" key={idx}>
                         <Image
                           src={banner}
                           alt={`Project ${idx}`}
@@ -154,50 +197,10 @@ function Dashboard() {
             </Tabs>
           </div>
         </Styles.Projects>
-        {/* --------------------- EXPERIENCE SECTION ------------------------ */}
-        <Styles.Experience>
-          <h1>Experiences Section</h1>
-          <div className="body">
-            <Timeline mode="alternate">
-              {ExperienceItems.map((item, idx) => {
-                const {
-                  role,
-                  org,
-                  employmentType,
-                  startMonth,
-                  startYear,
-                  endMonth,
-                  endYear,
-                  location,
-                  currentlyWorking,
-                } = item;
-                return (
-                  <Timeline.Item
-                    key={idx}
-                    color={currentlyWorking ? "red" : "blue"}
-                  >
-                    <h2>{role}</h2>
-                    <h3>
-                      {org} | {employmentType}
-                    </h3>
-                    <h3>
-                      {startMonth} {startYear}
-                      {" - "}
-                      {currentlyWorking ? (
-                        "Present"
-                      ) : (
-                        <>
-                          {endMonth} {endYear}
-                        </>
-                      )}
-                    </h3>
-                    <h3>{location}</h3>
-                  </Timeline.Item>
-                );
-              })}
-            </Timeline>
-          </div>
-        </Styles.Experience>
+        {/* --------------------- Experties SECTION ------------------------ */}
+        <Styles.Experties>
+          <h1>Experties</h1>
+        </Styles.Experties>
       </div>
     </Styles.Container>
   );
