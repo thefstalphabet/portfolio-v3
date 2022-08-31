@@ -8,6 +8,7 @@ module.exports = {
         customizeTheme: {
           "@primary-color": "#4E54C8",
           "@menu-item-active-bg": "#8f94fb",
+          "@timeline-item-padding-bottom": "30px"
         },
       },
     },

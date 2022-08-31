@@ -24,7 +24,7 @@ const ExperienceItems: Array<ExperienceItemsType> = [
     },
     {
         role: "Participant",
-        org: "GirlScript Summer of Code · Part-time",
+        org: "GirlScript Summer of Code",
         employmentType: "Part-time",
         startMonth: "March",
         startYear: 2022,
@@ -44,7 +44,6 @@ const ExperienceItems: Array<ExperienceItemsType> = [
         location: "Bangalore, India"
 
     },
-    
 ]
 
 export default ExperienceItems
