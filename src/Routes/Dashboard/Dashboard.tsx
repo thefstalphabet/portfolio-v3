@@ -1,7 +1,7 @@
 import { Background } from "../../Animations";
 import * as Styles from "./DashboardStyles";
 import SocialIconsData from "../../Configs/SocialIconsData";
-import { Button, Image, Timeline } from "antd";
+import { BackTop, Button, Image, Timeline } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
 import Avatar from "../../Assets/Avatar.png";
 import ExperienceItems from "../../Configs/ExperienceItems";
@@ -12,6 +12,7 @@ function Dashboard() {
 
   return (
     <Styles.Container>
+      <BackTop />
       <div className="header">
         <Styles.SocialIcons>
           {SocialIconsData.map((item, idx) => (

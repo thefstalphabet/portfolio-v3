@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    .body {
+        .scrollUp .btn{
+            font-size: 45px;
+            opacity: 0.5;
+        }
+    }
+`;
 export const SocialIcons = styled.div`
     display: flex;
     gap: 1rem;
@@ -129,4 +136,8 @@ export const Experience = styled.div`
         }
     }
 `;
-export const Experties = styled.div``;
+export const Experties = styled.div`
+    height: auto;
+    min-height: 100vh;
+    padding: 10px 1rem;
+`;
