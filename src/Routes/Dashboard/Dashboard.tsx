@@ -7,11 +7,13 @@ import Avatar from "../../Assets/Avatar.png";
 import ExperienceItems from "../../Configs/ExperienceItems";
 import { Tabs } from "antd";
 import ProjectData from "../../Configs/ProjectsData";
+import { MenuBar } from "../../Components";
 function Dashboard() {
   const { TabPane } = Tabs;
 
   return (
     <Styles.Container>
+      <MenuBar />
       <BackTop />
       <div className="header">
         <Styles.SocialIcons>
@@ -38,7 +40,7 @@ function Dashboard() {
             </h1>
             <Button
               type="ghost"
-              href="/about"
+              href="#about"
               className="infoBtn"
               icon={<ArrowDownOutlined />}
               size="large"
