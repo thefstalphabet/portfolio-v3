@@ -23,7 +23,10 @@ export const Container = styled.div`
         color: var(--white);
         opacity: 0.8;
     }
-    `;
+    .ant-anchor-ink-ball.visible {
+        display: none;
+    }
+`;
 export const Footer = styled.div`
     position: absolute;
     right: 0;
