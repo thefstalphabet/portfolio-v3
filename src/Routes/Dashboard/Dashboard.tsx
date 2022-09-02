@@ -30,7 +30,7 @@ function Dashboard() {
       </div>
       <div className="body">
         {/* --------------------- HOME SECTION ------------------------ */}
-        <Styles.Home>
+        <Styles.Home id="home">
           <div className="sortInfo">
             <h1>
               Hello, I'm <span>Akash Patel</span>.<br />I enjoy designing <br />
@@ -49,7 +49,7 @@ function Dashboard() {
         </Styles.Home>
         <Background />
         {/* --------------------- ABOUT SECTION ------------------------ */}
-        <Styles.About>
+        <Styles.About id="about">
           <h1>About Section</h1>
           <div className="body">
             <img src={Avatar} alt="avatar" className="avatar" />
@@ -71,7 +71,7 @@ function Dashboard() {
           </div>
         </Styles.About>
         {/* --------------------- EXPERIENCE SECTION ------------------------ */}
-        <Styles.Experience>
+        <Styles.Experience id="experience">
           <h1>Experiences Section</h1>
           <div className="body">
             <Timeline mode="alternate">
@@ -115,7 +115,7 @@ function Dashboard() {
           </div>
         </Styles.Experience>
         {/* --------------------- Projects SECTION ------------------------ */}
-        <Styles.Projects>
+        <Styles.Projects id="projects">
           <h1>Projects</h1>
           <div className="body">
             <Tabs defaultActiveKey="1" tabBarGutter={100} size="large" centered>
@@ -199,7 +199,7 @@ function Dashboard() {
           </div>
         </Styles.Projects>
         {/* --------------------- Experties SECTION ------------------------ */}
-        <Styles.Experties>
+        <Styles.Experties id="experties">
           <h1>Experties</h1>
         </Styles.Experties>
       </div>
