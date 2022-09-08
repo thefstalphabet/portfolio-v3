@@ -13,7 +13,6 @@ function App() {
                 route.subRoutes.map((subRoute, idx) => {
                   return (
                     <Route
-                      index={subRoute.index && true}
                       key={idx}
                       path={subRoute.path}
                       element={subRoute.component}
