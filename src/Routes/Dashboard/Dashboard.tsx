@@ -1,5 +1,5 @@
-import { Background } from "../../Animations";
 import * as Styles from "./DashboardStyles";
+import { Background } from "../../Animations";
 import SocialIconsData from "../../Configs/SocialIconsData";
 import { BackTop, Button } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
@@ -9,7 +9,9 @@ import {
   Experiences,
   Projects,
   Experties,
+  Contact,
 } from "../../Components";
+
 function Dashboard() {
   return (
     <Styles.Container>
@@ -53,6 +55,7 @@ function Dashboard() {
         <Experiences />
         <Projects />
         <Experties />
+        <Contact/>
       </div>
     </Styles.Container>
   );

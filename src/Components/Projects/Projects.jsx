@@ -1,28 +1,55 @@
-import { Image, Tabs } from "antd";
+import { GithubOutlined, GlobalOutlined } from "@ant-design/icons";
+import { Card, Tabs } from "antd";
 import ProjectData from "../../Configs/ProjectsData";
 import * as Styles from "./ProjectsStyles";
 
 function Projects() {
   const { TabPane } = Tabs;
-  
+
   return (
     <Styles.Container id="projects">
       <h1>Projects</h1>
       <div className="body">
-        <Tabs defaultActiveKey="1" tabBarGutter={100} size="large" centered>
+        <Tabs defaultActiveKey="1" tabBarGutter={50} size="large" centered>
           <TabPane tab="All" key="1">
             <div className="projects">
               {ProjectData.map((item, idx) => {
-                const { banner, title } = item;
+                const { banner, title, githubUrl, hostedUrl } = item;
                 return (
                   <div className="project" key={idx}>
-                    <Image
-                      src={banner}
-                      alt={`Project ${idx}`}
-                      placeholder
-                      className="banner"
-                    />
-                    <h2>{title}</h2>
+                    <Card
+                      cover={
+                        <img
+                          className="banner"
+                          src={banner}
+                          alt={`Project ${idx}`}
+                        />
+                      }
+                    >
+                      <div className="details">
+                        <h3>{title}</h3>
+                        <div className="icons">
+                          <a
+                            href={githubUrl}
+                            className="icon"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <GithubOutlined />
+                          </a>
+                          {hostedUrl && (
+                            <a
+                              href={hostedUrl}
+                              className="icon"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <GlobalOutlined />
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </Card>
                   </div>
                 );
               })}
@@ -42,16 +69,44 @@ function Projects() {
               {ProjectData.filter(
                 (item) => item.technologyUsed === "react"
               ).map((item, idx) => {
-                const { banner, title } = item;
+                const { banner, title, githubUrl, hostedUrl } = item;
                 return (
                   <div className="project" key={idx}>
-                    <Image
-                      src={banner}
-                      alt={`Project ${idx}`}
-                      placeholder
-                      className="banner"
-                    />
-                    <h2>{title}</h2>
+                    <Card
+                      cover={
+                        <img
+                          className="banner"
+                          src={banner}
+                          alt={`Project ${idx}`}
+                        />
+                      }
+                    >
+                      <div className="details">
+                        <h3>{title}</h3>
+                        <div className="icons">
+                          <div className="icons">
+                            <a
+                              href={githubUrl}
+                              className="icon"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <GithubOutlined />
+                            </a>
+                            {hostedUrl && (
+                              <a
+                                href={hostedUrl}
+                                className="icon"
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <GlobalOutlined />
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </Card>
                   </div>
                 );
               })}
@@ -70,16 +125,44 @@ function Projects() {
             <div className="projects">
               {ProjectData.filter((item) => item.technologyUsed === "mern").map(
                 (item, idx) => {
-                  const { banner, title } = item;
+                  const { banner, title, githubUrl, hostedUrl } = item;
                   return (
                     <div className="project" key={idx}>
-                      <Image
-                        src={banner}
-                        alt={`Project ${idx}`}
-                        placeholder
-                        className="banner"
-                      />
-                      <h2>{title}</h2>
+                      <Card
+                        cover={
+                          <img
+                            className="banner"
+                            src={banner}
+                            alt={`Project ${idx}`}
+                          />
+                        }
+                      >
+                        <div className="details">
+                          <h3>{title}</h3>
+                          <div className="icons">
+                            <div className="icons">
+                              <a
+                                href={githubUrl}
+                                className="icon"
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <GithubOutlined />
+                              </a>
+                              {hostedUrl && (
+                                <a
+                                  href={hostedUrl}
+                                  className="icon"
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <GlobalOutlined />
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </Card>
                     </div>
                   );
                 }
