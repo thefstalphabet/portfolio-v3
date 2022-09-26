@@ -10,6 +10,7 @@ import {
   Projects,
   Experties,
   Contact,
+  Footer,
 } from "../../Components";
 
 function Dashboard() {
@@ -55,7 +56,8 @@ function Dashboard() {
         <Experiences />
         <Projects />
         <Experties />
-        <Contact/>
+        <Contact />
+        <Footer />
       </div>
     </Styles.Container>
   );

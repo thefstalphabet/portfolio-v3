@@ -21,10 +21,9 @@ function Contact() {
   };
   return (
     <Styles.Container id="contact">
-      <h1>Contact</h1>
       <div className="body">
         <div>
-          <h2>Get in Touch</h2>
+          <h1>Get in Touch</h1>
           <p>
             If you have any questions, please feel free to drop a line. If you
             do not get an answer immeditely, I might just be travelling or busy
