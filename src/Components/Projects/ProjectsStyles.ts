@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height: auto;
-    min-height: 100vh;
     padding: 10px 1rem;
+    margin-bottom: 4rem;
     .body{
         margin-top: 2rem;
         .projects{
@@ -17,15 +16,24 @@ export const Container = styled.div`
                 .banner{
                     object-fit: cover;
                 }
+                .details{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .icons{
+                        display: flex;
+                        gap: 10px;
+                        .icon{
+                            font-size: 18px;
+                            color: var(--black);
+                        }
+                    }
+                }
             }
-        }
-        @media only screen and (max-width: 800px){
-            .projects{
-                grid-template-columns: repeat(2, 1fr);
+            @media only screen and (max-width: 800px){
+            grid-template-columns: repeat(2, 1fr);          
             }
-        }
-        @media only screen and (max-width: 600px){
-            .projects{
+            @media only screen and (max-width: 600px){
                 grid-template-columns: repeat(1, 1fr);
             }
         }
