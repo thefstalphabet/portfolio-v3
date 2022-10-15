@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height: auto;
-    min-height: 100vh;
+    /* height: auto;
+    min-height: 100vh; */
+    margin-bottom: 1rem;
     padding: 10px 1rem;
     .body{
         display: grid;

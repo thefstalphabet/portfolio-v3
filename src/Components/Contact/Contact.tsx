@@ -33,33 +33,25 @@ function Contact() {
         </div>
         <div>
           <Form layout="vertical" className="form">
-            {/* <Item label="Name" tooltip="Required"> */}
-              <Input
-                placeholder="Your Name"
-                onChange={(data) => setName(data.target.value)}
-              />
-            {/* </Item> */}
-            {/* <Item label="Location" tooltip="Required"> */}
-              <Input
-                placeholder="Where you Located"
-                onChange={(data) => setLocation(data.target.value)}
-              />
-            {/* </Item> */}
-            {/* <Item label="Subject" tooltip="Required"> */}
-              <Input
-                placeholder="Subject"
-                onChange={(data) => setSubject(data.target.value)}
-              />
-            {/* </Item> */}
-            {/* <Item label="Message" tooltip="Required"> */}
-              <TextArea
-                rows={4}
-                placeholder="Message"
-                showCount
-                maxLength={250}
-                onChange={(data) => setMessageForMe(data.target.value)}
-              />
-            {/* </Item> */}
+            <Input    
+              placeholder="Your Name"
+              onChange={(data) => setName(data.target.value)}
+            />
+            <Input
+              placeholder="Where you Located"
+              onChange={(data) => setLocation(data.target.value)}
+            />
+            <Input
+              placeholder="Subject"
+              onChange={(data) => setSubject(data.target.value)}
+            />
+            <TextArea
+              rows={4}
+              placeholder="Message"
+              showCount
+              maxLength={250}
+              onChange={(data) => setMessageForMe(data.target.value)}
+            />
             <Item>
               <Button
                 type="primary"
