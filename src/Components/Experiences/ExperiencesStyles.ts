@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height: auto;
-    min-height: 100vh;
+    margin-bottom: 1rem;
     padding: 10px 1rem;
     background-color: var(--light-gray);
     .body{
-        margin-top: 6rem;
+        margin-top: 2rem;
         h2{
             font-weight: bolder;
             color: var(--sec-color);

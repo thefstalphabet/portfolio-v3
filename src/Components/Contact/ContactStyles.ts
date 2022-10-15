@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height: auto;
-    min-height: 100vh;
+    margin-bottom: 1rem;
     padding: 10px 1rem;
     background-color: var(--light-gray);
     .body{
@@ -14,8 +13,12 @@ export const Container = styled.div`
         div:nth-child(2){
             display: grid;
             gap: 1rem;
+            .form{
+                display: grid;
+                gap: 1rem
+            }
         }
-        @media only screen and (max-width: 800px){
+        @media only screen and (max-width: 1000px){
             grid-template-columns: 1fr;          
         }
     }
