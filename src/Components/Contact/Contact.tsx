@@ -32,34 +32,34 @@ function Contact() {
           </p>
         </div>
         <div>
-          <Form layout="vertical">
-            <Item label="Name" tooltip="Required">
+          <Form layout="vertical" className="form">
+            {/* <Item label="Name" tooltip="Required"> */}
               <Input
-                placeholder="John Wick"
+                placeholder="Your Name"
                 onChange={(data) => setName(data.target.value)}
               />
-            </Item>
-            <Item label="Location" tooltip="Required">
+            {/* </Item> */}
+            {/* <Item label="Location" tooltip="Required"> */}
               <Input
-                placeholder="Japan"
+                placeholder="Where you Located"
                 onChange={(data) => setLocation(data.target.value)}
               />
-            </Item>
-            <Item label="Subject" tooltip="Required">
+            {/* </Item> */}
+            {/* <Item label="Subject" tooltip="Required"> */}
               <Input
-                placeholder="Want a help"
+                placeholder="Subject"
                 onChange={(data) => setSubject(data.target.value)}
               />
-            </Item>
-            <Item label="Message" tooltip="Required">
+            {/* </Item> */}
+            {/* <Item label="Message" tooltip="Required"> */}
               <TextArea
                 rows={4}
-                placeholder="Your Message"
+                placeholder="Message"
                 showCount
                 maxLength={250}
                 onChange={(data) => setMessageForMe(data.target.value)}
               />
-            </Item>
+            {/* </Item> */}
             <Item>
               <Button
                 type="primary"

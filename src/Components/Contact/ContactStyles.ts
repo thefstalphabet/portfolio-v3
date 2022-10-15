@@ -14,8 +14,12 @@ export const Container = styled.div`
         div:nth-child(2){
             display: grid;
             gap: 1rem;
+            .form{
+                display: grid;
+                gap: 1rem
+            }
         }
-        @media only screen and (max-width: 800px){
+        @media only screen and (max-width: 1000px){
             grid-template-columns: 1fr;          
         }
     }
