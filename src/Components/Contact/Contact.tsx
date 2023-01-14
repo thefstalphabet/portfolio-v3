@@ -33,9 +33,10 @@ function Contact() {
         </div>
         <div>
           <Form layout="vertical" className="form">
-            <Input    
+            <Input
               placeholder="Your Name"
               onChange={(data) => setName(data.target.value)}
+              autoFocus={true}
             />
             <Input
               placeholder="Where you Located"

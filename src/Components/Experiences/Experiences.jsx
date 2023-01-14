@@ -5,7 +5,7 @@ import * as Styles from "./ExperiencesStyles";
 function Experiences() {
   return (
     <Styles.Container id="experience">
-      <h1>Experiences Section</h1>
+      <h1>Experiences</h1>
       <div className="body">
         <Timeline mode="alternate">
           {ExperienceItems.map((item, idx) => {

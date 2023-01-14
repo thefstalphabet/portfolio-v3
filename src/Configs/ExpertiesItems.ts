@@ -12,17 +12,17 @@ const ExpertiesItems: Array<ExpertiesItemsType> = [
     {
         title: "Web Development",
         logo: WebDev,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti."
+        description: "I have over 2 years of experience in Web Development and worked on various projects with different Tech Stacks."
     },
     {
         title: "Graphic Design",
         logo: GraphicDesign,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti."
+        description: "Designing graphics is my other Hobby, love to create Banners, and Social media posts for my Creator account"
     },
     {
         title: "Competitive Programming",
         logo: Cp,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti."
+        description: "Solving problems since my Collage days, love to solve Problem with different Apporoches"
     }
 ]
 
