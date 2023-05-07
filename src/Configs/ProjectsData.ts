@@ -15,8 +15,8 @@ const ProjectData: Array<ProjectDataType> = [
         banner: Common,
         type: "web app",
         technologyUsed: "mern",
-        githubUrl: "https://github.com/thefstalphabet/chat-freely",
-        hostedUrl: "https://chat-freely-app.herokuapp.com",
+        githubUrl: "https://github.com/thefstalphabet/chat-freely-client",
+        hostedUrl: "https://chat-freely.netlify.app",
     },
     {
         title: "Moviepedia",
