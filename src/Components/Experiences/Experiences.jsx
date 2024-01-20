@@ -4,8 +4,8 @@ import * as Styles from "./ExperiencesStyles";
 
 function Experiences() {
   return (
-    <Styles.Container id="experience">
-      <h1>Experiences</h1>
+    <Styles.Container id="experience" className="container">
+      <h1 className="heading">Experiences</h1>
       <div className="body">
         <Timeline mode="alternate">
           {ExperienceItems.map((item, idx) => {

@@ -4,8 +4,8 @@ import ExpertiesItems from "../../Configs/ExpertiesItems";
 
 function Experties() {
   return (
-    <Styles.Container id="experties">
-      <h1>Experties</h1>
+    <Styles.Container id="experties" className="container">
+      <h1 className="heading">Experties</h1>
       <div className="experties">
         {ExpertiesItems.map((ele, idx) => {
           const { logo, title, description } = ele;

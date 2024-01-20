@@ -7,8 +7,8 @@ function Projects() {
   const { TabPane } = Tabs;
 
   return (
-    <Styles.Container id="projects">
-      <h1>Projects</h1>
+    <Styles.Container id="projects" className="container">
+      <h1 className="heading">Projects</h1>
       <div className="body">
         <Tabs defaultActiveKey="1" tabBarGutter={50} size="large" centered>
           <TabPane tab="All" key="1">

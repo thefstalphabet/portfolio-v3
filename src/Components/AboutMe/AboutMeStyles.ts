@@ -1,26 +1,25 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    /* height: auto;
-    min-height: 100vh; */
     margin-bottom: 1rem;
     padding: 10px 1rem;
     .body{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 2fr;
         justify-content: center;
         align-items: center;
         justify-items: center;
         margin-top: 5rem;
         row-gap: 2rem;
         .avatar{
-            width: 20rem;
+            width: 18rem;
         }
         .info{
             h1{
                 font-size: 2.7rem;
                 font-weight: bold;
                 line-height: 1.3;
+                margin-bottom: 1rem;
                 span{
                     color:  var(--sec-color);
                 }

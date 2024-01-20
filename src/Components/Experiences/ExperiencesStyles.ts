@@ -5,7 +5,7 @@ export const Container = styled.div`
     padding: 10px 1rem;
     background-color: var(--light-gray);
     .body{
-        margin-top: 2rem;
+        margin-top: 3rem;
         h2{
             font-weight: bolder;
             color: var(--sec-color);

@@ -3,6 +3,8 @@ import { Background } from "../../Animations";
 import SocialIconsData from "../../Configs/SocialIconsData";
 import { BackTop, Button } from "antd";
 import { ArrowDownOutlined } from "@ant-design/icons";
+import { useEffect, useState } from "react";
+import { calculateScrollPosition } from "../../Helpers/Methods";
 import {
   MenuBar,
   AboutMe,
@@ -14,9 +16,18 @@ import {
 } from "../../Components";
 
 function Dashboard() {
+  const defaultMenuButtonColor = "#ffffff";
+  const [menuButtonColor, setMenuButtonColor] = useState<string>(
+    defaultMenuButtonColor
+  );
+  
+  useEffect(() => {
+    calculateScrollPosition(setMenuButtonColor, defaultMenuButtonColor);
+  }, []);
+
   return (
     <Styles.Container>
-      <MenuBar />
+      <MenuBar toggleButtonColor={menuButtonColor} />
       <BackTop />
       <div className="header">
         <Styles.SocialIcons>
@@ -41,7 +52,7 @@ function Dashboard() {
               websites and digital products.
             </h1>
             <Button
-              type="ghost"
+              type="primary"
               href="#about"
               className="infoBtn"
               icon={<ArrowDownOutlined />}

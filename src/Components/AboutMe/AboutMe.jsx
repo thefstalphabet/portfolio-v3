@@ -3,8 +3,8 @@ import Avatar from "../../Assets/Avatar.png";
 
 function AboutMe() {
   return (
-    <Styles.Container id="about">
-      <h1>About Section</h1>
+    <Styles.Container id="about" className="container">
+      <h1 className="heading">About</h1>
       <div className="body">
         <img src={Avatar} alt="avatar" className="avatar" />
         <div className="info">
