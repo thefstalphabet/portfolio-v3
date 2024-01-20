@@ -36,7 +36,6 @@ function Contact() {
             <Input
               placeholder="Your Name"
               onChange={(data) => setName(data.target.value)}
-              autoFocus={true}
             />
             <Input
               placeholder="Where you Located"

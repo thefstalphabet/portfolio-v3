@@ -4,7 +4,13 @@ import { useState } from "react";
 import MenuItems from "../../Configs/MenuItems";
 import { CloseOutlined, RightOutlined } from "@ant-design/icons";
 
-function MenuBar() {
+interface IProp {
+  toggleButtonColor: string
+}
+
+function MenuBar(props: IProp) {
+  const {toggleButtonColor} = props
+
   const [collapsed, setCollapsed] = useState<boolean>(false);
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
@@ -22,7 +28,11 @@ function MenuBar() {
           }}
         />
       </Anchor>
-      <span className="toggleIcon" onClick={() => toggleCollapsed()}>
+      <span
+        className="toggleIcon"
+        onClick={() => toggleCollapsed()}
+        style={{ color: toggleButtonColor }}
+      >
         <RightOutlined />
       </span>
       <Styles.Footer>
